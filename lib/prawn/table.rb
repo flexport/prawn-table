@@ -574,7 +574,7 @@ module Prawn
       if row_number > 0 && @header
         y_coord = @pdf.cursor
         number_of_header_rows.times do |h|
-          additional_header_height = add_one_header_row(cells_this_page, x_offset, y_coord-header_height, row_number-1, h)
+          additional_header_height = add_one_header_row(cells_this_page, x_offset, y_coord-header_height, row_number-number_of_header_rows + h, h)
           header_height += additional_header_height
         end        
       end
